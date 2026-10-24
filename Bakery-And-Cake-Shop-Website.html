@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cream & Crust - Bakery & Ice Cream Parlour</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fff9f6;
+      color: #4a3b32;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 2px solid #fce7e1;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #d85a6f;
+    }
+
+    .logo span {
+      color: #92583e;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      margin-left: 20px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d85a6f;
+    }
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&q=80') center/cover no-repeat;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .hero-btn {
+      background-color: #d85a6f;
+      color: white;
+      padding: 10px 24px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero-btn:hover {
+      background-color: #c0455a;
+    }
+
+    /* Section Styling */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 26px;
+      color: #4a3b32;
+    }
+
+    .section-title p {
+      color: #8c766b;
+      font-size: 14px;
+    }
+
+    /* Special Offers Banner */
+    .offer-box {
+      background-color: #ffe5ec;
+      border: 1px dashed #d85a6f;
+      border-radius: 10px;
+      padding: 15px 25px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .offer-box h3 {
+      color: #c0455a;
+      font-size: 18px;
+    }
+
+    /* Products Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #f3e6e1;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #d85a6f;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 12px;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #f9ece8;
+      padding-top: 10px;
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 16px;
+      color: #4a3b32;
+    }
+
+    .order-btn {
+      background-color: #92583e;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background-color: #7a462f;
+    }
+
+    .custom-cake-section {
+      background-color: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #f0dfd8;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #fafafa;
+    }
+
+    .form-group input:focus, 
+    .form-group select:focus, 
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #d85a6f;
+      background-color: #fff;
+    }
+
+    .submit-btn {
+      background-color: #d85a6f;
+      color: white;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #c0455a;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      border: 1px solid #f3e6e1;
+    }
+
+    .info-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #92583e;
+      border-bottom: 2px solid #fce7e1;
+      padding-bottom: 6px;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    footer {
+      background-color: #2b211b;
+      color: #d2c2ba;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Cream & <span>Crust</span></div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#offers">Offers</a>
+      <a href="#custom">Custom Cakes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Artisanal Cakes & Cold-Stone Treats</h1>
+    <p>Inspired by rich ice cream stone mixes and fresh morning oven bakes. Crafted eggless and 100% fresh every day.</p>
+    <a href="#menu" class="hero-btn">View Menu</a>
+  </section>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Special Offers -->
+    <div class="offer-box" id="offers">
+      <h3>🎉 Weekend Special: Flat 15% Off on All Ice Cream Cakes!</h3>
+      <p style="font-size: 13px; color: #666; margin-top: 4px;">Use code <strong>CREAM15</strong> at checkout or show this at our counter.</p>
+    </div>
+
+    <!-- Product Menu -->
+    <div class="section-title" id="menu">
+      <h2>Popular Desserts & Cakes</h2>
+      <p>Hand-crafted cakes, fresh pastries, and cold-stone ice cream tubs</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80" alt="Belgian Chocolate Truffle">
+        <div class="card-body">
+          <span class="card-tag">Signature Cake</span>
+          <h3 class="card-title">Belgian Chocolate Truffle</h3>
+          <p class="card-desc">Layers of dark chocolate ganache with moist sponge cake.</p>
+          <div class="card-footer">
+            <span class="price">₹650</span>
+            <button class="order-btn" onclick="alert('Item added!')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&q=80" alt="Berry Ice Cream Sundae">
+        <div class="card-body">
+          <span class="card-tag">Cold Stone Treat</span>
+          <h3 class="card-title">Wild Berry Stone Sundae</h3>
+          <p class="card-desc">Strawberry & raspberry ice cream tossed with fresh berries.</p>
+          <div class="card-footer">
+            <span class="price">₹240</span>
+            <button class="order-btn" onclick="alert('Item added!')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=500&q=80" alt="Red Velvet Pastry">
+        <div class="card-body">
+          <span class="card-tag">Pastry</span>
+          <h3 class="card-title">Classic Red Velvet</h3>
+          <p class="card-desc">Rich cream-cheese frosting over traditional cocoa red sponge.</p>
+          <div class="card-footer">
+            <span class="price">₹140</span>
+            <button class="order-btn" onclick="alert('Item added!')">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&q=80" alt="Choco Chip Cookies">
+        <div class="card-body">
+          <span class="card-tag">Fresh Baked</span>
+          <h3 class="card-title">Butter Choco-Chip Cookies</h3>
+          <p class="card-desc">Crunchy butter cookies packed with melted chocolate chunks (Box of 6).</p>
+          <div class="card-footer">
+            <span class="price">₹180</span>
+            <button class="order-btn" onclick="alert('Item added!')">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Cake Request Form -->
+    <div class="custom-cake-section" id="custom">
+      <div class="section-title" style="margin-bottom: 20px;">
+        <h2>Order a Custom Cake</h2>
+        <p>Design your cake for birthdays, anniversaries, or celebrations</p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('Thank you! We received your custom cake inquiry.');">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="e.g. Ramesh Kumar" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="e.g. 9876543210" required>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="form-group">
+            <label for="flavour">Select Flavour</label>
+            <select id="flavour">
+              <option>Dutch Chocolate Truffle</option>
+              <option>Swiss Strawberry Ice Cream</option>
+              <option>Butterscotch Almond Crunch</option>
+              <option>Red Velvet & Cream Cheese</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="weight">Cake Weight</label>
+            <select id="weight">
+              <option>0.5 Kg (₹450)</option>
+              <option>1.0 Kg (₹850)</option>
+              <option>1.5 Kg (₹1,250)</option>
+              <option>2.0 Kg (₹1,600)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Custom Message on Cake</label>
+          <input type="text" id="message" placeholder="e.g. Happy 20th Birthday!">
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Special Instructions</label>
+          <textarea id="notes" rows="3" placeholder="Eggless preference, extra chocolate chips, delivery date..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Cake Request</button>
+      </form>
+    </div>
+    <div class="info-grid" id="contact">
+      <div class="info-card">
+        <h3>Store Timings</h3>
+        <p><strong>Monday – Friday:</strong> 10:00 AM – 11:30 PM</p>
+        <p><strong>Saturday – Sunday:</strong> 10:00 AM – 12:30 AM (Midnight)</p>
+        <p style="margin-top: 10px; color: #d85a6f; font-weight: 600;">Fresh batches baked daily at 10 AM & 5 PM.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Visit Our Parlour</h3>
+        <p><strong>Address:</strong> Door No. 40-1-5, MG Road, Near Benz Circle, Vijayawada, AP</p>
+        <p><strong>Call:</strong> +91 96403 34422</p>
+        <p><strong>Email:</strong> orders@creamandcrust.com</p>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <p>© 2026 Cream & Crust Bakery and Cake Shop. Web Development Lab Project.</p>
+  </footer>
+
+</body>
+</html>
