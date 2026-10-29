@@ -1,180 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Renu Naga Srujitha Yelisetti | Student Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Space Grotesk"', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#fff7ed',
-              100: '#ffedd5',
-              200: '#fed7aa',
-              500: '#f97316',
-              600: '#ea580c',
-              700: '#c2410c',
-            },
-            navy: {
-              800: '#1e293b',
-              900: '#0f172a',
-            }
-          }
-        }
-      }
-    }
-  </script>
+<title>Student Profile</title>
+
+<style>
+body {
+    font-family: Arial;
+    background-color: whitesmoke;
+    margin: 0;
+    color: black;
+}
+
+header {
+    background-color: midnightblue;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    width: 80%;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+}
+
+.profile, .projects, .contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 16px;
+    color: sienna;
+}
+
+p {
+    font-size: 14px;
+}
+
+.box {
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.skills span {
+    background-color: lightgray;
+    padding: 8px;
+    margin-right: 8px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+</style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
-  <header class="bg-navy-900 border-b border-navy-800 text-white sticky top-0 z-30 shadow-sm">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-      <div class="flex items-center space-x-2.5">
-        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-bold text-sm text-white shadow">
-          NRI
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="font-display font-bold text-sm tracking-wide text-white">NRI INSTITUTE OF TECHNOLOGY</span>
-          <span class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-semibold bg-brand-500/20 text-brand-300 border border-brand-500/30 rounded">
-            AUTONOMOUS
-          </span>
-        </div>
-      </div>
-      <div class="text-right">
-        <span class="text-xs text-slate-400 font-mono">Regd: 26000987</span>
-      </div>
+
+<body>
+
+<header>
+    <strong>NRI INSTITUTE OF TECHNOLOGY</strong>
+    <span>Regd: 26000987</span>
+</header>
+
+<main>
+
+<section class="profile">
+    <div>
+        <p>B.Tech Student - First Year</p>
+        <h1>RENU NAGA SRUJITHA<br>YELISETTI</h1>
+        <h2>Roll No: 26000987</h2>
     </div>
-  </header>
 
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+    <div>
+        <h3>NRI Deemed to be University</h3>
+        <p>Agiripalli Campus</p>
+        <p>Class: CSM-2</p>
+        <p>Batch 2026 - Semester 1</p>
+    </div>
+</section>
 
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <div class="inline-flex items-center space-x-2 px-2.5 py-1 bg-brand-50 text-brand-700 border border-brand-200 rounded-full text-xs font-semibold mb-3">
-            <span>●</span>
-            <span>B.Tech Student • First Year</span>
-          </div>
-          <h1 class="text-2xl sm:text-3xl font-display font-extrabold text-navy-900 tracking-tight">
-            RENU NAGA SRUJITHA YELISETTI
-          </h1>
-          <p class="text-sm font-mono text-brand-600 mt-1 font-semibold">Roll No: 26000987</p>
-        </div>
-        <div class="text-left sm:text-right text-xs space-y-1 text-slate-500 border-t sm:border-t-0 pt-3 sm:pt-0 border-slate-100">
-          <p><strong class="text-slate-800">NRI Deemed to be University</strong></p>
-          <p>Agiripalli Campus</p>
-          <p class="font-semibold text-brand-700">Class: CSM-2</p>
-          <p>Batch 2026 • Semester 1</p>
-        </div>
-      </div>
-    </section>
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">
-        01 // TECHNICAL SKILLS
-      </h2>
-      <div class="flex flex-wrap gap-2.5">
-        <span class="px-3.5 py-1.5 bg-slate-100 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 rounded-lg text-xs font-semibold text-slate-800 transition">
-          Python
-        </span>
-        <span class="px-3.5 py-1.5 bg-slate-100 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 rounded-lg text-xs font-semibold text-slate-800 transition">
-          HTML5
-        </span>
-        <span class="px-3.5 py-1.5 bg-slate-100 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 rounded-lg text-xs font-semibold text-slate-800 transition">
-          CSS3
-        </span>
-      </div>
-    </section>
+<section>
+    <h2>01 // TECHNICAL SKILLS</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+    </div>
+</section>
 
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">
-        02 // ACADEMIC PROJECTS
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        
-        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:border-brand-400 transition">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-[11px] font-mono text-brand-600 font-bold uppercase">Task 04</span>
-            <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Active</span>
-          </div>
-          <h3 class="text-sm font-bold text-slate-900">Student Academic Dashboard</h3>
-          <p class="text-xs text-slate-500 mt-1">Semester marks tracker, attendance calculator & circulars view.</p>
-          <div class="mt-3 text-[11px] font-mono text-slate-600 font-medium">
-            Tech: HTML • CSS • JavaScript
-          </div>
+<section>
+    <h2>02 // ACADEMIC PROJECTS</h2>
+
+    <div class="projects">
+        <div class="box">
+            <p>TASK 04 | Active</p>
+            <h3>Student Academic Dashboard</h3>
+            <p>Semester marks, attendance and circulars.</p>
+            <p>Tech: HTML and CSS</p>
         </div>
 
-        
-        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:border-brand-400 transition">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-[11px] font-mono text-brand-600 font-bold uppercase">Task 09</span>
-            <span class="text-[10px] font-semibold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Active</span>
-          </div>
-          <h3 class="text-sm font-bold text-slate-900">Bakery Online Store</h3>
-          <p class="text-xs text-slate-500 mt-1">Cakes catalog, pricing, seasonal discounts & custom order forms.</p>
-          <div class="mt-3 text-[11px] font-mono text-slate-600 font-medium">
-            Tech: HTML • CSS (Internal)
-          </div>
+        <div class="box">
+            <p>TASK 09 | Active</p>
+            <h3>Bakery Online Store</h3>
+            <p>Cake catalogue, pricing and order forms.</p>
+            <p>Tech: HTML and CSS</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>03 // SPORTS AND ACTIVITIES</h2>
+    <div class="box">
+        <h3>Playing Throwball</h3>
+        <p>Department sports and collegiate games.</p>
+    </div>
+</section>
+
+<section>
+    <h2>04 // CONTACT DETAILS</h2>
+
+    <div class="contact">
+        <div class="box">
+            <p>Email Address</p>
+            <strong>student@example.com</strong>
         </div>
 
-      </div>
-    </section>
-
-
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 font-mono">
-        03 // SPORTS & ACTIVITIES
-      </h2>
-      <div class="flex items-center space-x-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
-        <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-sm">
-          🏐
+        <div class="box">
+            <p>Phone Number</p>
+            <strong>0000000000</strong>
         </div>
-        <div>
-          <h3 class="text-sm font-bold text-slate-800">Playing Throwball</h3>
-          <p class="text-xs text-slate-500">Department sports & collegiate games</p>
-        </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-  
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono">
-        04 // CONTACT DETAILS
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
-          <div>
-            <p class="text-slate-400 font-medium text-[11px]">Email Address</p>
-            <p class="font-bold text-slate-800 mt-0.5">renu@info.com</p>
-          </div>
-          <button onclick="navigator.clipboard.writeText('renu@info.com'); alert('Email copied!');" class="text-brand-600 hover:text-brand-700 font-semibold text-[11px]">
-            Copy
-          </button>
-        </div>
+</main>
 
-        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
-          <div>
-            <p class="text-slate-400 font-medium text-[11px]">Phone Number</p>
-            <p class="font-bold text-slate-800 mt-0.5">0000000000</p>
-          </div>
-          <span class="text-slate-400 text-[11px] font-mono">Mobile</span>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-slate-200 bg-white py-5 text-center text-xs text-slate-500">
-    <p>© 2026 Renu Naga Srujitha Yelisetti • NRI Deemed to be University, Agiripalli</p>
-  </footer>
+<footer>
+    Copyright 2026 - Student Profile
+    <p>NRI Deemed to be University, Agiripalli</p>
+</footer>
 
 </body>
 </html>
